@@ -14,7 +14,7 @@ Set your `stylelint` config to:
 
 ```json
 {
-  "extends": "stylelint-config-barnardos"
+  "extends": "@barnardos/stylelint-config-barnardos"
 }
 ```
 
@@ -26,7 +26,7 @@ For example, to turn off the `block-no-empty` rule and use your `unit-whitelist`
 
 ```json
 {
-  "extends": "stylelint-config-barnardos",
+  "extends": "@barnardos/stylelint-config-barnardos",
   "rules": {
     "block-no-empty": null,
     "unit-whitelist": ["em", "rem", "s"]
