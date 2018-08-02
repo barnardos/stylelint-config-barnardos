@@ -4,6 +4,10 @@
   "description": "Shared stylelint config for Barnardos",
   "repository": "https://github.com/barnardos/stylelint-config-barnardos.git",
   "license": "MIT",
+  "main": "index.js",
+  "files": [
+    "plugins"
+  ],
   "scripts": {
     "check-format": "prettier '**/*.{css,json,js,md}' '!package.json' --list-different --ignore-path .gitignore",
     "format": "prettier '**/*.{css,json,js,md}' '!package.json' --write --ignore-path .gitignore",
