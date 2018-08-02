@@ -4,5 +4,6 @@ module.exports = {
   testMatch: [
     "<rootDir>/plugins/**/__tests__/**/*.js",
     "<rootDir>/__tests__/**/*.js"
-  ]
+  ],
+  testURL: "http://localhost"
 };
