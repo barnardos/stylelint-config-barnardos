@@ -47,14 +47,14 @@ describe("flags warnings with invalid css", () => {
   it("correct warning text", () => {
     return result.then(data =>
       expect(data.results[0].warnings[0].text).toBe(
-        'Unexpected property "top" (property-whitelist)'
+        'Unexpected at-rule "unknown" (at-rule-whitelist)'
       )
     );
   });
 
   it("correct rule flagged", () => {
     return result.then(data =>
-      expect(data.results[0].warnings[0].rule).toBe("property-whitelist")
+      expect(data.results[0].warnings[0].rule).toBe("at-rule-whitelist")
     );
   });
 
@@ -66,13 +66,13 @@ describe("flags warnings with invalid css", () => {
 
   it("correct line number", () => {
     return result.then(data =>
-      expect(data.results[0].warnings[0].line).toBe(4)
+      expect(data.results[0].warnings[0].line).toBe(1)
     );
   });
 
   it("correct column number", () => {
     return result.then(data =>
-      expect(data.results[0].warnings[0].column).toBe(3)
+      expect(data.results[0].warnings[0].column).toBe(1)
     );
   });
 });

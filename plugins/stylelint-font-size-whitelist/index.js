@@ -8,7 +8,7 @@ const {
 const declarationValueIndex = require("../utils/declarationValueIndex");
 const matchesStringOrRegExp = require("../utils/matchesStringOrRegExp");
 
-const ruleName = "plugin/font-font-size-whitelist";
+const ruleName = "plugin/font-size-whitelist";
 const messages = ruleMessages(ruleName, {
   rejected: size => `Unexpected font-size "${size}"`
 });
@@ -23,6 +23,13 @@ const rule = whitelist => {
     root.walkDecls("font", node => {
       const { value } = node;
       const { size } = parseCssFont(value);
+      check(node, size);
+    });
+    root.walkDecls("font-size", node => {
+      const { value } = node;
+      check(node, value);
+    });
+    function check(node, size) {
       if (matchesStringOrRegExp(size, whitelist)) return;
       const index = declarationValueIndex(node);
       const message = messages.rejected(size);
@@ -33,7 +40,7 @@ const rule = whitelist => {
         result,
         ruleName
       });
-    });
+    }
   };
 };
 
