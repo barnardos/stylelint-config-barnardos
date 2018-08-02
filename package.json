@@ -1,5 +1,5 @@
 {
-  "name": "stylelint-config-barnardos",
+  "name": "@barnardos/stylelint-config-barnardos",
   "version": "0.1.0",
   "description": "Shared stylelint config for Barnardos",
   "repository": "https://github.com/barnardos/stylelint-config-barnardos.git",
