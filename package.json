@@ -6,7 +6,9 @@
   "license": "MIT",
   "main": "index.js",
   "files": [
-    "plugins"
+    "plugins/utils",
+    "plugins/**/index.js",
+    "!**/__tests__"
   ],
   "scripts": {
     "check-format": "prettier '**/*.{css,json,js,md}' '!package.json' --list-different --ignore-path .gitignore",
