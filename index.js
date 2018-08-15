@@ -146,6 +146,7 @@ module.exports = {
       "padding-left",
       "padding-top",
       "padding",
+      "page-break-inside",
       "position",
       "resize",
       "right",
