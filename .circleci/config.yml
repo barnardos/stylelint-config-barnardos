@@ -1,27 +1,38 @@
-# Javascript Node CircleCI 2.0 configuration file
 version: 2
 jobs:
   build:
     docker:
-      - image: circleci/node:8.11.3
+      - image: circleci/node:8.11.4
 
-    working_directory: ~/repo
+    working_directory: ~/stylelint-config-barnardos
 
     steps:
       - checkout
 
       - restore_cache:
           keys:
-          - v1-dependencies-{{ checksum "package.json" }}
-          - v1-dependencies-
+            - v2-dependencies-{{ checksum "package-lock.json" }}
+            - v2-dependencies-
 
-      - run: npm install
+      - run:
+          name: Update npm
+          command: sudo npm install -g npm@latest
+
+      - run:
+          name: Check versions
+          command: |
+            node --version
+            npm --version
+
+      - run:
+          name: Install dependencies
+          command: npm ci
 
       - save_cache:
           paths:
             - node_modules
-          key: v1-dependencies-{{ checksum "package.json" }}
-        
-      - run: npm test
+          key: v2-dependencies-{{ checksum "package-lock.json" }}
 
-
+      - run:
+          name: Run tests
+          command: NODE_ENV=CI npm test
