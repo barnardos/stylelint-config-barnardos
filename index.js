@@ -186,7 +186,7 @@ module.exports = {
       "root"
     ],
     "unit-no-unknown": null,
-    "unit-whitelist": ["%", "fr", "px", "rem", "vw"],
+    "unit-whitelist": ["%", "fr", "px", "rem", "vh", "vw"],
     "value-no-vendor-prefix": true
   }
 };

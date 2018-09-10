@@ -1,3 +1,7 @@
+# 0.2.3
+
+- Fixed - whitelist `vh` unit
+
 # 0.2.2
 
 - Fixed - whitelist `padding-bottom` and `padding-right` properties
