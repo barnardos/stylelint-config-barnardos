@@ -1,3 +1,9 @@
+# Head
+
+- Fixed - whitelist `translate` and `rotate` properties
+- Fixed - whitelist `transform` and `transform-origin` properties
+- Fixed - whitelist `deg` unit
+
 # 0.2.3
 
 - Fixed - whitelist `vh` unit
