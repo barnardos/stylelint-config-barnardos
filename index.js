@@ -55,8 +55,10 @@ module.exports = {
       "color-mod",
       "minmax",
       "repeat",
+      "rotate",
       "shade",
       "tint",
+      "translate",
       "url",
       "var"
     ],
@@ -157,6 +159,8 @@ module.exports = {
       "text-decoration",
       "text-indent",
       "top",
+      "transform-origin",
+      "transform",
       "white-space",
       "width",
       "z-index"
@@ -186,7 +190,7 @@ module.exports = {
       "root"
     ],
     "unit-no-unknown": null,
-    "unit-whitelist": ["%", "fr", "px", "rem", "vh", "vw"],
+    "unit-whitelist": ["%", "deg", "fr", "px", "rem", "vh", "vw"],
     "value-no-vendor-prefix": true
   }
 };
