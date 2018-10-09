@@ -1,4 +1,4 @@
-# Head
+# 0.2.4
 
 - Fixed - whitelist `translate` and `rotate` properties
 - Fixed - whitelist `transform` and `transform-origin` properties
