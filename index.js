@@ -144,6 +144,7 @@ module.exports = {
       "margin",
       "max-width",
       "min-width",
+      "overflow",
       "padding-bottom",
       "padding-left",
       "padding-right",

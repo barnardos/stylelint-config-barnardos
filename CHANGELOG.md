@@ -1,3 +1,7 @@
+# Head
+
+- Fixed - whitelist `overflow` property
+
 # 0.3.0
 
 - Remove - `plugin/font-size-whitelist`
