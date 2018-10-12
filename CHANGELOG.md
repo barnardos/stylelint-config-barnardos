@@ -1,3 +1,7 @@
+# Head
+
+- Remove - `plugin/font-size-whitelist`
+
 # 0.2.4
 
 - Fixed - whitelist `translate` and `rotate` properties

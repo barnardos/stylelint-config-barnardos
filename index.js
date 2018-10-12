@@ -77,7 +77,6 @@ module.exports = {
       "#1d1d1d",
       "#fff"
     ],
-    "plugin/font-size-whitelist": ["/var\\(--type-/"],
     "plugin/function-arguments-whitelist": {
       shade: ["10%", "20%", "30%", "40%", "50%", "60%", "70%", "80%", "90%"],
       tint: ["10%", "20%", "30%", "40%", "50%", "60%", "70%", "80%", "90%"]
