@@ -1,4 +1,4 @@
-# Head
+# 0.3.2
 
 - Fixed - whitelist `visited` pseudo-class
 
