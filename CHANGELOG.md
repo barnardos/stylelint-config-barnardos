@@ -1,3 +1,7 @@
+# Head
+
+- Fixed - whitelist `visited` pseudo-class
+
 # 0.3.1
 
 - Fixed - whitelist `overflow` property

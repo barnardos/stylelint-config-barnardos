@@ -187,7 +187,8 @@ module.exports = {
       "focus",
       "hover",
       "not",
-      "root"
+      "root",
+      "visited"
     ],
     "unit-no-unknown": null,
     "unit-whitelist": ["%", "deg", "fr", "px", "rem", "vh", "vw"],
