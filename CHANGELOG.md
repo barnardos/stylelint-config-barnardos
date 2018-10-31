@@ -1,4 +1,4 @@
-# Head
+# 0.3.3
 
 - Fixed - whitelist `min-height` and `max-height` properties
 
