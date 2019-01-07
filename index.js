@@ -63,7 +63,7 @@ module.exports = {
       "var"
     ],
     "media-feature-name-no-vendor-prefix": true,
-    "media-feature-name-whitelist": ["min-width"],
+    "media-feature-name-whitelist": ["min-height", "min-width"],
     "number-max-precision": 4,
     "order/order": ["custom-properties", "declarations"],
     "order/properties-alphabetical-order": [true, { severity: "warning" }],
@@ -79,7 +79,18 @@ module.exports = {
     ],
     "plugin/function-arguments-whitelist": {
       shade: ["10%", "20%", "30%", "40%", "50%", "60%", "70%", "80%", "90%"],
-      tint: ["10%", "20%", "30%", "40%", "50%", "60%", "70%", "80%", "90%"]
+      tint: [
+        "10%",
+        "20%",
+        "30%",
+        "40%",
+        "50%",
+        "60%",
+        "70%",
+        "80%",
+        "90%",
+        "95%"
+      ]
     },
     "plugin/property-value-rem-multiples": [
       {
@@ -113,6 +124,7 @@ module.exports = {
       "bottom",
       "box-shadow",
       "box-sizing",
+      "clear",
       "color",
       "content",
       "display",
@@ -120,6 +132,7 @@ module.exports = {
       "flex-direction",
       "flex-wrap",
       "flex",
+      "float",
       "font-family",
       "font-size",
       "font-style",
@@ -193,7 +206,7 @@ module.exports = {
       "visited"
     ],
     "unit-no-unknown": null,
-    "unit-whitelist": ["%", "deg", "fr", "px", "rem", "vh", "vw"],
+    "unit-whitelist": ["%", "deg", "fr", "px", "rem", "vh", "vhmin", "vw"],
     "value-no-vendor-prefix": true
   }
 };

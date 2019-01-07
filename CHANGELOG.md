@@ -1,3 +1,10 @@
+# 0.3.4
+
+- Fixed - whitelist `min-height` media feature
+- Fixed - whitelist `clear` and `float` properties
+- Fixed - whitelist `vhmin` unit
+- Fixed - whitelist `95%` for `tint` function
+
 # 0.3.3
 
 - Fixed - whitelist `min-height` and `max-height` properties
