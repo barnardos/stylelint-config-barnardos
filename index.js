@@ -117,6 +117,7 @@ module.exports = {
       "appearance",
       "background-color",
       "background-image",
+      "background-position",
       "background-size",
       "background",
       "border-radius",
@@ -201,12 +202,13 @@ module.exports = {
       "first-child",
       "focus",
       "hover",
+      "nth-of-type",
       "not",
       "root",
       "visited"
     ],
     "unit-no-unknown": null,
-    "unit-whitelist": ["%", "deg", "fr", "px", "rem", "vh", "vhmin", "vw"],
+    "unit-whitelist": ["%", "deg", "fr", "px", "rem", "vh", "vmin", "vw"],
     "value-no-vendor-prefix": true
   }
 };

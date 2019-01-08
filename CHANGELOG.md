@@ -1,3 +1,9 @@
+# 0.3.5
+
+- Fixed - whitelist `background-position` property
+- Fixed - whitelist `vmin` unit
+- Fixed - whitelist `nth-of-type` pseudo-class
+
 # 0.3.4
 
 - Fixed - whitelist `min-height` media feature
