@@ -1,3 +1,9 @@
+# 0.3.6
+
+- Fixed - whitelist `grid-template` property
+- Fixed - max universal selectors
+- Fixed - whitelist `nth-child` and `last-child` pseudo-classes
+
 # 0.3.5
 
 - Fixed - whitelist `background-position` property
