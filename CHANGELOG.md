@@ -1,3 +1,7 @@
+# 0.3.7
+
+- Fixed - whitelist `%` unit for `margin` and `padding` properties
+
 # 0.3.6
 
 - Fixed - whitelist `grid-template` property

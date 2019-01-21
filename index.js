@@ -44,8 +44,8 @@ module.exports = {
     "declaration-property-unit-whitelist": {
       outline: ["%", "px", "rem"],
       "/^font/": ["rem"],
-      "/^margin/": ["rem", "vw"],
-      "/^padding/": ["rem"]
+      "/^margin/": ["%", "rem", "vw"],
+      "/^padding/": ["%", "rem"]
     },
     "font-family-no-missing-generic-family-keyword": null,
     "function-url-no-scheme-relative": true,
