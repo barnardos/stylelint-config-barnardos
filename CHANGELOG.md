@@ -1,3 +1,8 @@
+# 0.3.8
+
+- Fixed - whitelist `checked` pseudo-class
+- Fixed - whitelist `opacity`, `outline`, `outline-offset`, `overflow-x` and `overflow-y` properties
+
 # 0.3.7
 
 - Fixed - whitelist `%` unit for `margin` and `padding` properties
