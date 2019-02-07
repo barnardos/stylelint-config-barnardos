@@ -1,3 +1,8 @@
+# 0.3.9
+
+- Fixed - whitelist `focus-within` pseudo-class
+- Fixed - whitelist `align-self` and `pointer-events` properties
+
 # 0.3.8
 
 - Fixed - whitelist `checked` pseudo-class
