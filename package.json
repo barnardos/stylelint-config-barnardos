@@ -1,6 +1,6 @@
 {
   "name": "@barnardos/stylelint-config-barnardos",
-  "version": "0.3.8",
+  "version": "0.3.9",
   "description": "Shared stylelint config for Barnardos",
   "repository": "https://github.com/barnardos/stylelint-config-barnardos.git",
   "license": "MIT",
