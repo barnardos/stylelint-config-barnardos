@@ -55,6 +55,7 @@ module.exports = {
     "function-whitelist": [
       "calc",
       "color-mod",
+      "linear-gradient",
       "minmax",
       "repeat",
       "rotate",

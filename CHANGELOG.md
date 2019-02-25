@@ -1,6 +1,7 @@
 # Head
 
 - Added - enforce consistent nesting
+- Fixed - whitelist `linear-gradient` function
 
 # 0.3.9
 
