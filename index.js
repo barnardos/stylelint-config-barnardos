@@ -5,7 +5,8 @@ module.exports = {
   plugins: [
     "./plugins/index.js",
     "stylelint-order",
-    "stylelint-selector-bem-pattern"
+    "stylelint-selector-bem-pattern",
+    "stylelint-use-nesting"
   ],
   rules: {
     "at-rule-empty-line-before": [
@@ -19,6 +20,7 @@ module.exports = {
     "at-rule-no-unknown": null,
     "at-rule-no-vendor-prefix": true,
     "at-rule-whitelist": ["font-face", "import", "media"],
+    "csstools/use-nesting": "always",
     "color-hex-length": "short",
     "color-no-hex": true,
     "custom-property-empty-line-before": [

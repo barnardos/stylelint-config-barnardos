@@ -1,3 +1,7 @@
+# Head
+
+- Added - enforce consistent nesting
+
 # 0.3.9
 
 - Fixed - whitelist `focus-within` pseudo-class

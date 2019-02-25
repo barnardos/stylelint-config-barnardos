@@ -25,7 +25,8 @@
     "postcss-values-parser": "^2.0.0",
     "stylelint-config-recommended": "^2.1.0",
     "stylelint-order": "^2.0.0",
-    "stylelint-selector-bem-pattern": "^2.0.0"
+    "stylelint-selector-bem-pattern": "^2.0.0",
+    "stylelint-use-nesting": "^1.1.0"
   },
   "devDependencies": {
     "eslint": "^5.9.0",
