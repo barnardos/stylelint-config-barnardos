@@ -2,6 +2,7 @@
 
 - Added - enforce consistent nesting
 - Fixed - whitelist `linear-gradient` function
+- Fixed - whitelist yellow hex colour
 
 # 0.3.9
 
