@@ -1,7 +1,8 @@
 # Head
 
 - Added - enforce consistent nesting
-- Fixed - whitelist `linear-gradient` function
+- Fixed - whitelist `alpha` and `linear-gradient` function
+- Fixed - whitelist 10% increments for `alpha` function
 - Fixed - whitelist yellow hex colour
 
 # 0.3.9

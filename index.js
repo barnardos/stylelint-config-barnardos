@@ -53,6 +53,7 @@ module.exports = {
     "function-url-no-scheme-relative": true,
     "function-url-scheme-whitelist": [],
     "function-whitelist": [
+      "alpha",
       "calc",
       "color-mod",
       "linear-gradient",
@@ -82,6 +83,7 @@ module.exports = {
       "#fff"
     ],
     "plugin/function-arguments-whitelist": {
+      alpha: ["10%", "20%", "30%", "40%", "50%", "60%", "70%", "80%", "90%"],
       shade: ["10%", "20%", "30%", "40%", "50%", "60%", "70%", "80%", "90%"],
       tint: [
         "10%",
