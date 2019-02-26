@@ -1,4 +1,4 @@
-# Head
+# 0.4.0
 
 - Added - enforce consistent nesting
 - Fixed - whitelist `alpha` and `linear-gradient` function
