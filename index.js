@@ -69,7 +69,7 @@ module.exports = {
     "media-feature-name-no-vendor-prefix": true,
     "media-feature-name-whitelist": ["min-height", "min-width"],
     "number-max-precision": 4,
-    "order/order": ["custom-properties", "declarations"],
+    "order/order": ["custom-properties", "declarations", "rules", "at-rules"],
     "order/properties-alphabetical-order": [true, { severity: "warning" }],
     "plugin/color-hex-whitelist": [
       "#6aa300",
