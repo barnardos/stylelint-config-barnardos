@@ -184,6 +184,7 @@ module.exports = {
       "position",
       "resize",
       "right",
+      "scroll-behavior",
       "src",
       "text-align",
       "text-decoration",
