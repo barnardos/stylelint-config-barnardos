@@ -1,3 +1,7 @@
+# 0.5.0
+
+- Added: consistent order for nested rules and at-rules
+
 # 0.4.1
 
 - Fixed - whitelist `scroll-behavior` function
