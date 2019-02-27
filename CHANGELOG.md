@@ -1,7 +1,12 @@
+# 0.4.1
+
+- Fixed - whitelist `scroll-behavior` function
+- Fixed - whitelist `%` unit for `font-size` property
+
 # 0.4.0
 
 - Added - enforce consistent nesting
-- Fixed - whitelist `alpha` and `linear-gradient` function
+- Fixed - whitelist `alpha` and `linear-gradient` functions
 - Fixed - whitelist 10% increments for `alpha` function
 - Fixed - whitelist yellow hex colour
 
