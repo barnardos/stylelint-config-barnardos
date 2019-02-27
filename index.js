@@ -45,7 +45,7 @@ module.exports = {
     },
     "declaration-property-unit-whitelist": {
       outline: ["%", "px", "rem"],
-      "/^font/": ["rem"],
+      "/^font/": ["%", "rem"],
       "/^margin/": ["%", "rem", "vw"],
       "/^padding/": ["%", "rem"]
     },
