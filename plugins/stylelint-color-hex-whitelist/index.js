@@ -1,5 +1,5 @@
 const isArray = require("lodash/isArray");
-const postcssValuesParser = require("postcss-values-parser");
+const { parse } = require("postcss-values-parser");
 const {
   createPlugin,
   utils: { report, ruleMessages, validateOptions }
@@ -21,15 +21,14 @@ const rule = whitelist => {
     });
     if (!validOptions) return;
     root.walkDecls(node => {
-      const { value: nodeValue } = node;
-      const valuesRoot = postcssValuesParser(nodeValue, {
-        loose: true
-      }).parse();
-      valuesRoot.walk(({ sourceIndex, type, value }) => {
-        if (type !== "word") return;
-        if (value[0] !== "#") return;
+      const { value } = node;
+      parse(value, {
+        ignoreUnknownWords: true
+      }).walkWords(({ value, isHex, parent: { name, type } }) => {
+        if (!isHex) return;
+        if (type === "func" && name === "url") return;
         if (matchesStringOrRegExp(value, whitelist)) return;
-        const index = declarationValueIndex(node) + sourceIndex;
+        const index = declarationValueIndex(node);
         const message = messages.rejected(value);
         report({
           index,

@@ -1,7 +1,7 @@
 const isObject = require("lodash/isObject");
 const isEmpty = require("lodash/isEmpty");
 const find = require("lodash/find");
-const postcssValuesParser = require("postcss-values-parser");
+const { parse } = require("postcss-values-parser");
 const {
   createPlugin,
   utils: { report, ruleMessages, validateOptions }
@@ -24,21 +24,18 @@ const rule = whitelist => {
     });
     if (!validOptions) return;
     root.walkDecls(node => {
-      const { value: nodeValue } = node;
-      const valuesRoot = postcssValuesParser(nodeValue, {
-        loose: true
-      }).parse();
-      valuesRoot.walk(valuesNode => {
-        const { sourceIndex, type, value } = valuesNode;
-        if (type !== "func") return;
+      const { value } = node;
+      parse(value, {
+        ignoreUnknownWords: true
+      }).walkFuncs(({ name, params }) => {
+        const args = params.slice(1, -1);
         const functionWhitelist = find(whitelist, (list, key) =>
-          matchesStringOrRegExp(value, key)
+          matchesStringOrRegExp(name, key)
         );
         if (isEmpty(functionWhitelist)) return;
-        const args = getArguments(valuesNode);
         if (matchesStringOrRegExp(args, functionWhitelist)) return;
-        const index = declarationValueIndex(node) + sourceIndex;
-        const message = messages.rejected(value, args);
+        const index = declarationValueIndex(node);
+        const message = messages.rejected(name, args);
         report({
           index,
           message,
@@ -49,13 +46,6 @@ const rule = whitelist => {
       });
     });
   };
-};
-
-const getArguments = node => {
-  // strip first and last nodes (i.e. the parens)
-  node.removeChild(node.first);
-  node.removeChild(node.last);
-  return node.nodes.toString();
 };
 
 module.exports = createPlugin(ruleName, rule);
