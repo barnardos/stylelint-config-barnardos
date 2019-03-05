@@ -1,3 +1,7 @@
+# Head
+
+- Fixed - `property-value-rem-multiples` to allow small negative sizes
+
 # 0.5.1
 
 - Fixed - whitelist `supports` at-rule

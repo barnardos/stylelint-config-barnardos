@@ -108,7 +108,18 @@ module.exports = {
         "/^margin/": 4,
         "/^padding/": 4
       },
-      { ignoreNumbers: ["0.125", "0.25", "0.5", "0.75"] }
+      {
+        ignoreNumbers: [
+          "-0.125",
+          "-0.25",
+          "-0.5",
+          "-0.75",
+          "0.125",
+          "0.25",
+          "0.5",
+          "0.75"
+        ]
+      }
     ],
     "plugin/selector-bem-pattern": [
       {
