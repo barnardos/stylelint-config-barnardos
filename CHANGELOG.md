@@ -1,3 +1,7 @@
+# Head
+
+- Fixed - whitelist `supports` at-rule
+
 # 0.5.0
 
 - Added: consistent order for nested rules and at-rules

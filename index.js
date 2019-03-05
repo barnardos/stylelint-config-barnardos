@@ -19,7 +19,7 @@ module.exports = {
     ],
     "at-rule-no-unknown": null,
     "at-rule-no-vendor-prefix": true,
-    "at-rule-whitelist": ["font-face", "import", "media"],
+    "at-rule-whitelist": ["font-face", "import", "media", "supports"],
     "csstools/use-nesting": "always",
     "color-hex-length": "short",
     "color-no-hex": true,
