@@ -2,7 +2,7 @@ const find = require("lodash/find");
 const isInteger = require("lodash/isInteger");
 const isObject = require("lodash/isObject");
 const isString = require("lodash/isString");
-const postcssValuesParser = require("postcss-values-parser");
+const { parse } = require("postcss-values-parser");
 const {
   createPlugin,
   utils: { report, ruleMessages, validateOptions }
@@ -42,23 +42,20 @@ const rule = (
     );
     if (!validOptions) return;
     root.walkDecls(node => {
-      const { value: nodeValue, prop } = node;
-      if (!nodeValue.includes("rem")) return;
+      const { value, prop } = node;
+      if (!value.includes("rem")) return;
       const multiple = find(whitelist, (list, key) =>
         matchesStringOrRegExp(prop, key)
       );
       if (!isInteger(multiple)) return;
-      const valuesRoot = postcssValuesParser(nodeValue, {
-        loose: true
-      }).parse();
-      valuesRoot.walk(valuesNode => {
-        const { sourceIndex, type, value, unit } = valuesNode;
+      parse(value, {
+        ignoreUnknownWords: true
+      }).walkNumerics(({ value, unit }) => {
         const { ignoreNumbers } = options;
-        if (type !== "number") return;
         if (unit !== "rem") return;
         if (ignoreNumbers.includes(value)) return;
         if ((value * baseSize) % multiple === 0) return;
-        const index = declarationValueIndex(node) + sourceIndex;
+        const index = declarationValueIndex(node);
         const message = messages.expected(`${value}${unit}`, multiple);
         report({
           index,

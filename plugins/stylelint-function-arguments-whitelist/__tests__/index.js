@@ -31,13 +31,13 @@ testRule(rule, {
       code: "a { color: color-mod(#ffffff shade(5%)) }",
       message: messages.rejected("shade", "5%"),
       line: 1,
-      column: 30
+      column: 12
     },
     {
       code: "a { color: color-mod(#ffffff\ntint(5%)) }",
       message: messages.rejected("tint", "5%"),
-      line: 2,
-      column: 1
+      line: 1,
+      column: 12
     }
   ]
 });

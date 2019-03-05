@@ -25,9 +25,6 @@ testRule(rule, {
       code: 'a { content: "#aaa"); }'
     },
     {
-      code: "a { color: var(--#aaa); }"
-    },
-    {
       code: "/* #aaa */"
     }
   ],
@@ -42,14 +39,14 @@ testRule(rule, {
     {
       code: "a { background: #fff,\n#aaa }",
       message: messages.rejected("#aaa"),
-      line: 2,
-      column: 1
+      line: 1,
+      column: 17
     },
     {
       code: "a { box-shadow: color-mod(#ffffff shade(10%)) }",
       message: messages.rejected("#ffffff"),
       line: 1,
-      column: 27
+      column: 17
     }
   ]
 });
