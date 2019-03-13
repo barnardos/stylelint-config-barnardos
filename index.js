@@ -146,6 +146,7 @@ module.exports = {
       "clear",
       "color",
       "content",
+      "cursor",
       "display",
       "flex-basis",
       "flex-direction",

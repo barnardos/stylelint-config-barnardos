@@ -1,3 +1,7 @@
+# Head
+
+- Fixed - whitelist `cursor` property
+
 # 0.5.2
 
 - Fixed - `property-value-rem-multiples` to allow small negative sizes
