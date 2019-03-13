@@ -1,4 +1,4 @@
-# Head
+# 0.5.3
 
 - Fixed - whitelist `cursor` property
 
