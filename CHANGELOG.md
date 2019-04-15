@@ -1,4 +1,4 @@
-# Head
+# 0.5.4
 
 - Fixed - stylelint@10 peer dependency
 
