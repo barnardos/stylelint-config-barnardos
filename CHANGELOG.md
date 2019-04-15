@@ -1,3 +1,7 @@
+# Head
+
+- Fixed - stylelint@10 peer dependency
+
 # 0.5.3
 
 - Fixed - whitelist `cursor` property
