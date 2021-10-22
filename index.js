@@ -72,7 +72,7 @@ module.exports = {
     "order/order": ["custom-properties", "declarations", "rules", "at-rules"],
     "order/properties-alphabetical-order": [true, { severity: "warning" }],
     "plugin/color-hex-whitelist": [
-      "#6aa300",
+      "#558200",
       "#cc0070",
       "#0099a9",
       "#6e2066",
