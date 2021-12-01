@@ -7,26 +7,26 @@ testRule(rule, {
 
   accept: [
     {
-      code: "a { color: #000; }"
+      code: "a { color: #000; }",
     },
     {
-      code: "a { color: #fff; }"
+      code: "a { color: #fff; }",
     },
     {
-      code: "a { color: rgb(22, 22, 22); }"
+      code: "a { color: rgb(22, 22, 22); }",
     },
     {
-      code: "a { background: #000; }"
+      code: "a { background: #000; }",
     },
     {
-      code: "a { background: url(x.svg#aaa); }"
+      code: "a { background: url(x.svg#aaa); }",
     },
     {
-      code: 'a { content: "#aaa"); }'
+      code: 'a { content: "#aaa"); }',
     },
     {
-      code: "/* #aaa */"
-    }
+      code: "/* #aaa */",
+    },
   ],
 
   reject: [
@@ -34,19 +34,19 @@ testRule(rule, {
       code: "a { color: #aaa }",
       message: messages.rejected("#aaa"),
       line: 1,
-      column: 12
+      column: 12,
     },
     {
       code: "a { background: #fff,\n#aaa }",
       message: messages.rejected("#aaa"),
       line: 1,
-      column: 17
+      column: 17,
     },
     {
       code: "a { box-shadow: color-mod(#ffffff shade(10%)) }",
       message: messages.rejected("#ffffff"),
       line: 1,
-      column: 17
-    }
-  ]
+      column: 17,
+    },
+  ],
 });

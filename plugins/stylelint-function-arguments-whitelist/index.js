@@ -4,7 +4,7 @@ const find = require("lodash/find");
 const { parse } = require("postcss-values-parser");
 const {
   createPlugin,
-  utils: { report, ruleMessages, validateOptions }
+  utils: { report, ruleMessages, validateOptions },
 } = require("stylelint");
 
 const declarationValueIndex = require("../utils/declarationValueIndex");
@@ -13,20 +13,20 @@ const matchesStringOrRegExp = require("../utils/matchesStringOrRegExp");
 const ruleName = "plugin/function-arguments-whitelist";
 const messages = ruleMessages(ruleName, {
   rejected: (func, args) =>
-    `Unexpected arguments "${args}" for function "${func}"`
+    `Unexpected arguments "${args}" for function "${func}"`,
 });
 
-const rule = whitelist => {
+const rule = (whitelist) => {
   return (root, result) => {
     const validOptions = validateOptions(result, ruleName, {
       actual: whitelist,
-      possible: isObject
+      possible: isObject,
     });
     if (!validOptions) return;
-    root.walkDecls(node => {
+    root.walkDecls((node) => {
       const { value } = node;
       parse(value, {
-        ignoreUnknownWords: true
+        ignoreUnknownWords: true,
       }).walkFuncs(({ name, params }) => {
         const args = params.slice(1, -1);
         const functionWhitelist = find(whitelist, (list, key) =>
@@ -41,7 +41,7 @@ const rule = whitelist => {
           message,
           node,
           result,
-          ruleName
+          ruleName,
         });
       });
     });

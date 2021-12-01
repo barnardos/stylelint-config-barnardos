@@ -1,3 +1,7 @@
+# 0.6.0
+
+- Updated packages including breaking changes
+
 # 0.5.4
 
 - Fixed - stylelint@10 peer dependency

@@ -5,7 +5,7 @@ const isString = require("lodash/isString");
 const { parse } = require("postcss-values-parser");
 const {
   createPlugin,
-  utils: { report, ruleMessages, validateOptions }
+  utils: { report, ruleMessages, validateOptions },
 } = require("stylelint");
 
 const declarationValueIndex = require("../utils/declarationValueIndex");
@@ -14,14 +14,14 @@ const matchesStringOrRegExp = require("../utils/matchesStringOrRegExp");
 const ruleName = "plugin/property-value-rem-multiples";
 const messages = ruleMessages(ruleName, {
   expected: (value, multiple) =>
-    `Expected "${value}" to be multiple of "${multiple}"`
+    `Expected "${value}" to be multiple of "${multiple}"`,
 });
 const baseSize = 16;
 
 const rule = (
   whitelist,
   options = {
-    ignoreNumbers: []
+    ignoreNumbers: [],
   }
 ) => {
   return (root, result) => {
@@ -30,18 +30,18 @@ const rule = (
       ruleName,
       {
         actual: whitelist,
-        possible: isObject
+        possible: isObject,
       },
       {
         actual: options,
         possible: {
-          ignoreNumbers: [isString]
+          ignoreNumbers: [isString],
         },
-        optional: true
+        optional: true,
       }
     );
     if (!validOptions) return;
-    root.walkDecls(node => {
+    root.walkDecls((node) => {
       const { value, prop } = node;
       if (!value.includes("rem")) return;
       const multiple = find(whitelist, (list, key) =>
@@ -49,7 +49,7 @@ const rule = (
       );
       if (!isInteger(multiple)) return;
       parse(value, {
-        ignoreUnknownWords: true
+        ignoreUnknownWords: true,
       }).walkNumerics(({ value, unit }) => {
         const { ignoreNumbers } = options;
         if (unit !== "rem") return;
@@ -62,7 +62,7 @@ const rule = (
           message,
           node,
           result,
-          ruleName
+          ruleName,
         });
       });
     });

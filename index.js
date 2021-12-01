@@ -6,7 +6,7 @@ module.exports = {
     "./plugins/index.js",
     "stylelint-order",
     "stylelint-selector-bem-pattern",
-    "stylelint-use-nesting"
+    "stylelint-use-nesting",
   ],
   rules: {
     "at-rule-empty-line-before": [
@@ -14,12 +14,12 @@ module.exports = {
       {
         except: ["blockless-after-same-name-blockless"],
         ignore: ["after-comment", "first-nested"],
-        severity: "warning"
-      }
+        severity: "warning",
+      },
     ],
     "at-rule-no-unknown": null,
     "at-rule-no-vendor-prefix": true,
-    "at-rule-whitelist": ["font-face", "import", "media", "supports"],
+    "at-rule-allowed-list": ["font-face", "import", "media", "supports"],
     "csstools/use-nesting": "always",
     "color-hex-length": "short",
     "color-no-hex": true,
@@ -28,31 +28,31 @@ module.exports = {
       {
         except: ["after-custom-property"],
         ignore: ["after-comment", "first-nested", "inside-single-line-block"],
-        severity: "warning"
-      }
+        severity: "warning",
+      },
     ],
     "declaration-empty-line-before": [
       "always",
       {
         except: ["after-declaration"],
         ignore: ["after-comment", "first-nested", "inside-single-line-block"],
-        severity: "warning"
-      }
+        severity: "warning",
+      },
     ],
     "declaration-no-important": true,
-    "declaration-property-value-whitelist": {
-      border: ["none"]
+    "declaration-property-value-allowed-list": {
+      border: ["none"],
     },
-    "declaration-property-unit-whitelist": {
+    "declaration-property-unit-allowed-list": {
       outline: ["%", "px", "rem"],
       "/^font/": ["%", "rem"],
       "/^margin/": ["%", "rem", "vw"],
-      "/^padding/": ["%", "rem"]
+      "/^padding/": ["%", "rem"],
     },
     "font-family-no-missing-generic-family-keyword": null,
     "function-url-no-scheme-relative": true,
-    "function-url-scheme-whitelist": [],
-    "function-whitelist": [
+    "function-url-scheme-allowed-list": [],
+    "function-allowed-list": [
       "alpha",
       "calc",
       "color-mod",
@@ -64,10 +64,10 @@ module.exports = {
       "tint",
       "translate",
       "url",
-      "var"
+      "var",
     ],
     "media-feature-name-no-vendor-prefix": true,
-    "media-feature-name-whitelist": ["min-height", "min-width"],
+    "media-feature-name-allowed-list": ["min-height", "min-width"],
     "number-max-precision": 4,
     "order/order": ["custom-properties", "declarations", "rules", "at-rules"],
     "order/properties-alphabetical-order": [true, { severity: "warning" }],
@@ -80,7 +80,7 @@ module.exports = {
       "#c30000",
       "#ffbf47",
       "#1d1d1d",
-      "#fff"
+      "#fff",
     ],
     "plugin/function-arguments-whitelist": {
       alpha: ["10%", "20%", "30%", "40%", "50%", "60%", "70%", "80%", "90%"],
@@ -95,8 +95,8 @@ module.exports = {
         "70%",
         "80%",
         "90%",
-        "95%"
-      ]
+        "95%",
+      ],
     },
     "plugin/property-value-rem-multiples": [
       {
@@ -106,7 +106,7 @@ module.exports = {
         "grid-gap": 4,
         "line-height": 4,
         "/^margin/": 4,
-        "/^padding/": 4
+        "/^padding/": 4,
       },
       {
         ignoreNumbers: [
@@ -117,19 +117,19 @@ module.exports = {
           "0.125",
           "0.25",
           "0.5",
-          "0.75"
-        ]
-      }
+          "0.75",
+        ],
+      },
     ],
     "plugin/selector-bem-pattern": [
       {
-        preset: "suit"
+        preset: "suit",
       },
-      { severity: "warning" }
+      { severity: "warning" },
     ],
     "property-no-unknown": null,
     "property-no-vendor-prefix": true,
-    "property-whitelist": [
+    "property-allowed-list": [
       "align-items",
       "align-self",
       "appearance",
@@ -206,16 +206,16 @@ module.exports = {
       "transform",
       "white-space",
       "width",
-      "z-index"
+      "z-index",
     ],
     "rule-empty-line-before": [
       "always",
       {
         ignore: ["after-comment", "first-nested"],
-        severity: "warning"
-      }
+        severity: "warning",
+      },
     ],
-    "selector-attribute-operator-whitelist": [],
+    "selector-attribute-operator-allowed-list": [],
     "selector-max-attribute": 0,
     "selector-max-class": 2,
     "selector-max-id": 0,
@@ -224,7 +224,7 @@ module.exports = {
     "selector-nested-pattern": "^&",
     "selector-no-vendor-prefix": true,
     "selector-pseudo-class-no-unknown": null,
-    "selector-pseudo-class-whitelist": [
+    "selector-pseudo-class-allowed-list": [
       "active",
       "checked",
       "first-child",
@@ -236,10 +236,10 @@ module.exports = {
       "nth-child",
       "nth-of-type",
       "root",
-      "visited"
+      "visited",
     ],
     "unit-no-unknown": null,
-    "unit-whitelist": ["%", "deg", "fr", "px", "rem", "vh", "vmin", "vw"],
-    "value-no-vendor-prefix": true
-  }
+    "unit-allowed-list": ["%", "deg", "fr", "px", "rem", "vh", "vmin", "vw"],
+    "value-no-vendor-prefix": true,
+  },
 };
