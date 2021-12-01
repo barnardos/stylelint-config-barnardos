@@ -2,7 +2,7 @@ const isArray = require("lodash/isArray");
 const { parse } = require("postcss-values-parser");
 const {
   createPlugin,
-  utils: { report, ruleMessages, validateOptions }
+  utils: { report, ruleMessages, validateOptions },
 } = require("stylelint");
 
 const declarationValueIndex = require("../utils/declarationValueIndex");
@@ -10,20 +10,20 @@ const matchesStringOrRegExp = require("../utils/matchesStringOrRegExp");
 
 const ruleName = "plugin/color-hex-whitelist";
 const messages = ruleMessages(ruleName, {
-  rejected: hex => `Unexpected hex "${hex}"`
+  rejected: (hex) => `Unexpected hex "${hex}"`,
 });
 
-const rule = whitelist => {
+const rule = (whitelist) => {
   return (root, result) => {
     const validOptions = validateOptions(result, ruleName, {
       actual: whitelist,
-      possible: isArray
+      possible: isArray,
     });
     if (!validOptions) return;
-    root.walkDecls(node => {
+    root.walkDecls((node) => {
       const { value } = node;
       parse(value, {
-        ignoreUnknownWords: true
+        ignoreUnknownWords: true,
       }).walkWords(({ value, isHex, parent: { name, type } }) => {
         if (!isHex) return;
         if (type === "func" && name === "url") return;
@@ -35,7 +35,7 @@ const rule = whitelist => {
           message,
           node,
           result,
-          ruleName
+          ruleName,
         });
       });
     });

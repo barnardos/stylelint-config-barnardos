@@ -7,23 +7,23 @@ testRule(rule, {
 
   accept: [
     {
-      code: "a { color: color-mod(#000 shade(10%)); }"
+      code: "a { color: color-mod(#000 shade(10%)); }",
     },
     {
-      code: "a { color: color-mod(#000 tint(20%)); }"
+      code: "a { color: color-mod(#000 tint(20%)); }",
     },
     {
-      code: "a { color: color-mod(#000 alpha(5%)); }"
+      code: "a { color: color-mod(#000 alpha(5%)); }",
     },
     {
-      code: "a { width: calc(2px * 100); }"
+      code: "a { width: calc(2px * 100); }",
     },
     {
-      code: 'a { content: "shade(5%)"); }'
+      code: 'a { content: "shade(5%)"); }',
     },
     {
-      code: "/* shade(5%)*/"
-    }
+      code: "/* shade(5%)*/",
+    },
   ],
 
   reject: [
@@ -31,13 +31,13 @@ testRule(rule, {
       code: "a { color: color-mod(#ffffff shade(5%)) }",
       message: messages.rejected("shade", "5%"),
       line: 1,
-      column: 12
+      column: 12,
     },
     {
       code: "a { color: color-mod(#ffffff\ntint(5%)) }",
       message: messages.rejected("tint", "5%"),
       line: 1,
-      column: 12
-    }
-  ]
+      column: 12,
+    },
+  ],
 });
