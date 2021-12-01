@@ -1,14 +1,19 @@
-version: 2
+version: 2.1
+orbs:
+  node: circleci/node@4.1.0
+
 jobs:
-  build:
-    docker:
-      - image: circleci/node:10.14.2
-
-    working_directory: ~/eslint-config-barnardos
-
+  install-test:
+    executor:
+      name: node/default
     steps:
       - checkout
       - node/install-packages
       - run:
           name: Run tests
           command: NODE_ENV=CI npm test
+
+workflows:
+  install-test:
+    jobs:
+      - install-test
