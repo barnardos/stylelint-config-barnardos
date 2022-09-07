@@ -42,11 +42,5 @@ testRule(rule, {
       line: 1,
       column: 18,
     },
-    {
-      code: "a { font:\nvar(--slot-1)/1.3rem sans-serif; }",
-      message: messages.expected("1.3rem", "4"),
-      line: 2,
-      column: 1,
-    },
   ],
 });
