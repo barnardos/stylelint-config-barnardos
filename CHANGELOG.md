@@ -1,3 +1,7 @@
+# 0.6.1
+
+- Updated whitelist to change red for accessibility.
+
 # 0.6.0
 
 - Updated packages including breaking changes
